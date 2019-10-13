@@ -1,5 +1,5 @@
 public enum TriangleType {
     RIGHT_ANGLE,
-    //ISOSCELES,
+    ISOSCELES,
     SCALENE
 }

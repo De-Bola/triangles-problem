@@ -2,7 +2,6 @@ public class AreaCalculator {
     public double findTriangleArea(Triangle triangle){
         //using heron's formula
         int sum = addSidesOfTriangle(triangle.getSideA(), triangle.getSideB(), triangle.getSideC());
-        //triangle.setSum(sum);
 
         double sumFactor = getHeronFactor((float) sum);
         double diffA = triangle.getSideA();

@@ -29,19 +29,6 @@ public class Main {
             triangle.setSideC(scanner.nextInt());
         } while (triangle.getSideC() == null);
 
-        if (triangle.getSideB() == 0 || triangle.getSideC() == 0 || triangle.getSideA() == 0) {
-            System.out.println("This isn't a triangle");
-        }
-
-        if ((triangle.getSideA().intValue() == triangle.getSideB().intValue() && !triangle.getSideA().equals(triangle.getSideC())) ||
-                (triangle.getSideA().intValue() == triangle.getSideC().intValue() && !triangle.getSideA().equals(triangle.getSideB())) ||
-                (triangle.getSideC().intValue() == triangle.getSideB().intValue() && !triangle.getSideB().equals(triangle.getSideA()))) {
-            System.out.println("This is an isosceles triangle");
-            printAngles(triangle);
-            printArea(triangle);
-            return;
-        }
-
         String output = triangleFactory.getTypeFactory(triangle);
         if(output != null){
             System.out.println("Your triangle type is " + output);
